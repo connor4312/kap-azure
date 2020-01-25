@@ -1,0 +1,61 @@
+{
+  "name": "kap-azure",
+  "version": "1.0.0",
+  "description": "Azure Storage plugin for Kap",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "rimraf dist && npm run compile",
+    "compile": "tsc",
+    "watch": "tsc --watch",
+    "test:lint": "eslint \"src/**/*.ts\"",
+    "test:fmt": "prettier --list-different \"src/**/*.ts\" \"*.md\"",
+    "test:unit": "mocha dist/**/*.test.js",
+    "test": "npm run test:unit && npm run test:fmt",
+    "fmt": "prettier --write \"src/**/*.ts\" \"*.md\" && npm run test:lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connor4312/kap-azure.git"
+  },
+  "keywords": [
+    "kap-plugin",
+    "azure",
+    "blob"
+  ],
+  "author": "Connor Peet <connor@peet.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/connor4312/kap-azure/issues"
+  },
+  "homepage": "https://github.com/connor4312/kap-azure#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.5.0",
+    "@types/sinon": "^7.5.1",
+    "@types/uuid": "^3.4.6",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "chai": "^4.2.0",
+    "electron-store": "^5.1.0",
+    "eslint": "^6.8.0",
+    "got": "^10.3.0",
+    "kap-plugin-test": "^0.5.0",
+    "mocha": "^7.0.0",
+    "node": "^13.6.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "sinon": "^8.1.1",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@azure/storage-blob": "^12.0.2",
+    "dayjs": "^1.8.19",
+    "uuid": "^3.4.0"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
