@@ -84,7 +84,7 @@ const action = async (context: KapContext<AzureConfig>) => {
       blobContentType: contentTypes.get(context.format),
     },
     onProgress: evt => {
-      context.setProgress('Uploading...', evt.loadedBytes / size);
+      context.setProgress('Uploading…', evt.loadedBytes / size);
     },
   });
 
