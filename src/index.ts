@@ -103,16 +103,19 @@ export const service: KapShareService = {
       title: 'Storage Account Name',
       type: 'string',
       default: '',
+      required: true,
     },
     accountKey: {
       title: 'Storage Account Key',
       type: 'string',
       default: '',
+      required: true,
     },
     container: {
       title: 'Container',
       type: 'string',
       default: 'kap',
+      required: true,
     },
     filePattern: {
       title: 'File Name Pattern',
@@ -122,7 +125,7 @@ export const service: KapShareService = {
       default: '{kapName}',
     },
     urlPattern: {
-      title: 'URL Pattern.',
+      title: 'URL Pattern',
       description: `URL where uploaded files can be found. Defaults to ${defaultUrlPattern}.`,
       type: 'string',
       default: '',
