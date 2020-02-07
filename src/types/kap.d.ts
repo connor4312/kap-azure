@@ -21,6 +21,6 @@ declare module 'kap' {
     action(context: KapContext): Promise<void>;
     title: string;
     formats: ReadonlyArray<string>;
-    config: { [key: string]: JSONSchema7 };
+    config: { [key: string]: Omit<JSONSchema7, 'required'> & { required?: boolean } };
   }
 }
