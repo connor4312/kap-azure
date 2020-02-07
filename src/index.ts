@@ -102,12 +102,16 @@ export const service: KapShareService = {
     accountName: {
       title: 'Storage Account Name',
       type: 'string',
+      minLength: 3,
+      maxLength: 24,
+      pattern: /^[a-z\d]+$/.source,
       default: '',
       required: true,
     },
     accountKey: {
       title: 'Storage Account Key',
       type: 'string',
+      minLength: 1,
       default: '',
       required: true,
     },
