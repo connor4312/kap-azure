@@ -1,7 +1,7 @@
 {
   "name": "kap-azure",
   "version": "1.0.1",
-  "description": "Azure Storage plugin for Kap",
+  "description": "Upload recordings to Azure (Blob) Storage",
   "main": "dist/index.js",
   "scripts": {
     "prepublishOnly": "rimraf dist && npm run compile",
